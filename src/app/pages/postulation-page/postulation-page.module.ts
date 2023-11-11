@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { NgIf } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,25 +16,24 @@ import PostulationPageComponent from './postulation-page.component';
 const routes: Routes = [{ path: '', component: PostulationPageComponent }];
 
 @NgModule({
-  declarations: [
-    PostulationConfirmationComponent,
-    PostulationPageComponent,
-    ExperienceComponent,
-    BasicInformationComponent,
-  ],
-  imports: [
-    RouterModule.forChild(routes),
-    WorkCardModule,
-    MatStepperModule,
-    MatButtonModule,
-    RouterLink,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    NgIf,
-    MatIconModule,
-    MatButtonModule,
-  ],
-  exports: [PostulationConfirmationComponent],
+	declarations: [
+		PostulationConfirmationComponent,
+		PostulationPageComponent,
+		ExperienceComponent,
+		BasicInformationComponent
+	],
+	imports: [
+		RouterModule.forChild(routes),
+		WorkCardModule,
+		MatStepperModule,
+		MatButtonModule,
+		RouterLink,
+		MatFormFieldModule,
+		MatInputModule,
+		ReactiveFormsModule,
+		MatIconModule,
+		MatButtonModule
+	],
+	exports: [PostulationConfirmationComponent]
 })
 export class PostulationPageModule {}

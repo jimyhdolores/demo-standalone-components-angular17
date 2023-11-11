@@ -1,5 +1,6 @@
 <div class="home-container">
-	<section class="home-cards" matRipple *ngFor="let work of works" (click)="clickWorkCard(work)">
+	@for (work of works; track work.title) {
+	<section class="home-cards" matRipple (click)="clickWorkCard(work)">
 		<app-work-card
 			[dataWork]="{ image: work.image, title: work.title, company: work.company, publication: work.publication }"
 		/>
@@ -15,4 +16,5 @@
 			</div>
 		</section>
 	</section>
+	}
 </div>
