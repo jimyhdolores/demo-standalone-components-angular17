@@ -1,4 +1,5 @@
-<section class="wd-company" *ngIf="work">
+@if (work) {
+<section class="wd-company">
 	<button class="wd-company__back" mat-button routerLink="/">
 		<span class="material-icons"> arrow_back </span>
 		Regresar al listado de empleos
@@ -35,15 +36,19 @@
 		</span>
 
 		<ul>
-			<li *ngFor="let function of work.detail.jobFunctions.items">
-				{{ function }}
+			@for (item of work.detail.jobFunctions.items; track item) {
+			<li>
+				{{ item }}
 			</li>
+			}
 		</ul>
 		<h2>Requerimientos del cargo</h2>
 		<ul>
-			<li *ngFor="let requirement of work.detail.jobRequirements">
-				{{ requirement }}
-			</li>
+			@for (requirement of work.detail.jobRequirements; track requirement) {
+			{{
+				requirement
+			}}
+			}
 		</ul>
 	</section>
 
@@ -60,3 +65,5 @@
 		</button>
 	</section>
 </section>
+
+}
