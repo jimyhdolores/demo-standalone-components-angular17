@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -13,13 +12,13 @@ import { PostulationConfirmationComponent } from './postulation-confirmation/pos
 	selector: 'app-postulation-page',
 	standalone: true,
 	imports: [
-		MatStepperModule,
-		MatButtonModule,
 		WorkCardComponent,
 		ExperienceComponent,
 		BasicInformationComponent,
 		PostulationConfirmationComponent,
-		NgIf,
+
+		MatStepperModule,
+		MatButtonModule,
 		RouterLink
 	],
 	templateUrl: './postulation-page.component.html',
